@@ -11,5 +11,16 @@ public class Practice {
         }
 
         System.out.println(nums.size());
+        removeOdds(nums);
+        System.out.println(nums.size());
+    }
+
+    public static void removeOdds(Set<Integer> s) {
+        Iterator<Integer> itr = s.iterator();
+        while (itr.hasNext()) {
+            if (itr.next()%2==1) {
+                itr.remove();
+            }
+        }
     }
 }
